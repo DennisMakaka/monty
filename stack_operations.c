@@ -34,7 +34,6 @@ void addnode(stack_t **head, int n)
 {
 	 /* Allocate memory for the new node */
 	stack_t *new_node = malloc(sizeof(stack_t));
-	
 	/* Check if malloc was successful */
 	if (new_node == NULL)
 	{
@@ -70,6 +69,11 @@ void f_queue(stack_t **head, unsigned int counter)
 	bus.lifo = 1;
 }
 
+/**
+ * addqueue - Adds a new node to the end of a linked list (queue).
+ * @head: Pointer to the head of the queue.
+ * @n: Value to be stored in the new node.
+ */
 void addqueue(stack_t **head, int n)
 {
 	stack_t *new_node;

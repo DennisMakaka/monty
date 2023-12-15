@@ -20,5 +20,5 @@ void f_div(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->n /= (*stack)->n;
-	 f_pop(stack,line_number);
+	 f_pop(stack, line_number);
 }

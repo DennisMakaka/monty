@@ -11,7 +11,7 @@
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	const instruction_t opst[] = {
-		{"push", push},{"pall", pall}, {"pint", f_pint},
+		{"push", push}, {"pall", pall}, {"pint", f_pint},
 		{"pop", f_pop},
 		{"swap", f_swap},
 		{"add", f_add},
@@ -24,8 +24,8 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"pstr", f_pstr},
 		{"rotl", f_rotl},
 		{"rotr", f_rotr},
-		{"queue",f_queue},
-		{"stack",f_stack},
+		{"queue", f_queue},
+		{"stack", f_stack},
 		{NULL, NULL}
 	};
 	unsigned int i;
@@ -57,12 +57,11 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 
 	if (op && opst[i].opcode == NULL)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", counter,op);
+		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-
 	return (1);
 }

@@ -3,7 +3,7 @@
 /**
  * push - Adds node to stack or queue.
  * @stack: Pointer to the stack or queue.
- * @line_numebr: Linenumber to the file
+ * @line_number: Line number to the file
  */
 void push(stack_t **stack, unsigned int line_number)
 {
@@ -18,15 +18,14 @@ void push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	if (bus.arg[0]== '_')
+	if (bus.arg[0] == '_')
 		j++;
 
-	for (; bus.arg[j]!= '\0'; j++)
+	for (; bus.arg[j] != '\0'; j++)
 	{
 		if (bus.arg[j] > '9' || bus.arg[j] < '0')
 			flag = 1;
 	}
-	
 	if (flag == 1)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", (int)line_number);
@@ -36,9 +35,9 @@ void push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	n=atoi(bus.arg);
+	n = atoi(bus.arg);
 
-	if (bus.lifo ==0)
+	if (bus.lifo == 0)
 		addnode(stack, n);
 	else
 		addqueue(stack, n);

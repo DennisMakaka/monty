@@ -25,7 +25,7 @@ void f_rotl(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = current;
 	(*stack)->next = NULL;
 
-	*stack =new_top;
+	*stack = new_top;
 
 	if (*stack != NULL)
 	{

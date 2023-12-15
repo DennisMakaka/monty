@@ -24,6 +24,6 @@ void f_rotr(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = current;
 
 	*stack = current->next;
-	(*stack)->prev =NULL;
+	(*stack)->prev = NULL;
 	current->next = NULL;
 }
